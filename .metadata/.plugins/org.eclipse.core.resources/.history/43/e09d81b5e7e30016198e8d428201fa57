@@ -1,0 +1,12 @@
+
+public class ProjectOne {
+	public static void main(String[] args){
+		Rational thing = new Rational("Fuck");
+	}
+}
+
+class Rational{
+	Rational(String thing){
+		System.out.println(thing);
+	}
+}

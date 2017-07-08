@@ -1,0 +1,33 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+@SuppressWarnings("serial")
+public class myButton extends JButton {
+	
+	public myButton(String Name){
+		
+		super ("Textytext");
+        setFont(new Font("Arial", Font.PLAIN, 90));
+        setBackground(Color.BLACK);
+        setForeground(Color.WHITE);
+        setBorderPainted(false);
+        setName(i+"");
+
+        
+	 addChangeListener(new ChangeListener() {
+         @Override
+         public void stateChanged(ChangeEvent evt) {
+             if (getModel().isPressed()) {
+                 setBackground(pressedColor);
+             } else if (getModel().isRollover()) {
+                 setBackground(rolloverColor);
+             } else {
+                 setBackground(normalColor);
+             }
+         }
+	 }
+}

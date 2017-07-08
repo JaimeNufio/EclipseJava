@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class twopointfive {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Double inches,feet;
+		
+		System.out.println("Convert Inches to Feet! Input number of Inches:");
+		inches = Double.parseDouble(scan.nextLine());
+		feet = inches/12;
+		System.out.println(inches);
+	}
+
+}

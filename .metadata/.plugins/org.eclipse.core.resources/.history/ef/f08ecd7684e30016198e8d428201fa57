@@ -1,0 +1,15 @@
+
+public class Main {
+
+	public static void main(String args[]){
+		
+		//2.4
+		 System.out.println("50 plus 25 is " + 50 + 25);
+		// Returns "50 plus 25 is 5025" because it is takes the 50 and 25
+		//and concatenates them as strings would
+		
+		//2.5
+		 System.out.println("He thrusts his fists\n\tagainst" +
+				 "the post\nand still insists\n\the sees the \"ghost\"");
+	}
+}

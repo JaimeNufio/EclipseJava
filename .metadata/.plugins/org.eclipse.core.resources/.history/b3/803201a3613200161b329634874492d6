@@ -1,0 +1,8 @@
+
+public class Main {
+	public static void main(String Args[]){
+		Thread test = new MyThread(15), test1 = new MyThread(2);
+		test.run();
+		test1.run();
+	}
+}

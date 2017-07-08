@@ -1,0 +1,52 @@
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+@SuppressWarnings("serial")
+public class myButton extends JButton {
+	
+	Color PressedColor = Color.RED, NormalColor = Color.BLACK, RollOverColor = Color.GRAY;
+	boolean state = false;
+	
+	public myButton(String Name){
+		
+		super (Name);
+		setText(Name);
+        setFont(new Font("Arial", Font.PLAIN, 40)); //90
+        setBackground(Color.BLACK);
+        setForeground(Color.WHITE);
+        setBorderPainted(false);
+        setName(Name);
+        state = false;
+        
+
+        
+        addChangeListener(new ChangeListener() {
+        	@Override
+        	public void stateChanged(ChangeEvent evt) {
+        		if (getModel().isPressed() ) {
+        			setBackground(PressedColor);
+        			if (state){
+        				state = false;
+        			}else{
+        				state = true;
+        			}
+        			System.out.println(getName()+" was clicked and set to "+state);
+        		}else if(getModel().isRollover()) {
+        			setBackground(RollOverColor);
+        		}else{
+        			setBackground(NormalColor);
+        		}
+        	}
+        });
+	}
+
+	public boolean getState() {
+		return state;
+	}
+
+
+}

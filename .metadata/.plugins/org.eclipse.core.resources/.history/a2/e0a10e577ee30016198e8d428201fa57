@@ -1,0 +1,11 @@
+
+public class Car {
+
+	double speed;
+	
+	super Car (double vel){
+		this.speed = vel;
+	}
+
+	
+}

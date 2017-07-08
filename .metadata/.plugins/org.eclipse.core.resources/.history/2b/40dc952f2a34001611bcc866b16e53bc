@@ -1,0 +1,32 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import javax.swing.JLabel;
+
+@SuppressWarnings("serial")
+public class Place extends JLabel {
+	
+	public String name;
+	public int pos;
+	
+	
+	Place(int position){
+		
+		name = "Tile # "+position;
+		pos = position;
+		setBackground(Color.BLACK);
+		setText("");
+
+		
+		this.addMouseListener(new MouseAdapter()   {   
+	        public void mouseClicked(MouseEvent e){   
+	        	System.out.println(name);
+	        }   
+		});
+		this.setBackground(new Color(pos,pos,pos));
+		this.setOpaque(true);
+
+	}
+}

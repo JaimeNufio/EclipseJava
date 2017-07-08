@@ -1,0 +1,64 @@
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+public class Game extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Game() throws InterruptedException {
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 700, 500);
+		
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBackground(Color.GRAY);
+		textField.setBounds(609, 311, 75, 150);
+		contentPane.add(textField);
+		textField.setColumns(10);
+
+		Game frame = new Game();
+		
+		frame.setVisible(true);
+	
+		
+		Blocks block = new Blocks(100,200);
+		
+		frame.add(block);
+		
+		while (true){
+			Thread.sleep(004);
+			block.move();
+		}
+		
+	}
+}

@@ -1,0 +1,14 @@
+
+public class phieffect {
+
+	public String text = "";
+	public static String fill(int spots){
+		
+		for ()
+	}
+	
+	public static void main(String args[]) throws InterruptedException {
+
+	}
+}
+

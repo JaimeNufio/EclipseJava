@@ -1,0 +1,21 @@
+
+public class phieffect {
+
+	public static void main(String args[]) throws InterruptedException {
+		String text = "";
+		while (true){
+			text = "";
+			for (int i = 0; i <= 10; i++){
+				
+				for(int a = 1; a <i;i++){
+					text = text+"-";
+				}
+				text = text+"Hey";
+				for(int b = i-10 ){
+					
+				}
+				System.out.println();
+			}
+		}
+	}
+}

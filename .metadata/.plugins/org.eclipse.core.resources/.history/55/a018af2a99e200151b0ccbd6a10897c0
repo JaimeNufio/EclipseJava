@@ -1,0 +1,14 @@
+
+public class myButton extends JButton {
+	 addChangeListener(new ChangeListener() {
+         @Override
+         public void stateChanged(ChangeEvent evt) {
+             if (getModel().isPressed()) {
+                 setBackground(pressedColor);
+             } else if (getModel().isRollover()) {
+                 setBackground(rolloverColor);
+             } else {
+                 setBackground(normalColor);
+             }
+         }
+}

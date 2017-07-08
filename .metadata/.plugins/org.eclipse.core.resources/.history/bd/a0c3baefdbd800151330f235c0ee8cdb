@@ -1,0 +1,29 @@
+
+public class phieffect {
+
+	public static String text = "";
+	public static String thing = "Hello";
+	public static void fill(int spots){
+		
+		for (int i = 1; i <= spots; i++){
+			text = text+"~";
+		}
+		
+	}
+	
+	public static void main(String args[]) throws InterruptedException {
+		
+		while(true){
+			for(int i = 1; i <=10; i++){
+				text = "";
+				fill(i);
+				text = text+thing;
+				fill(11-i);
+				System.out.println(text+"\n");
+			}
+			
+		}
+		
+	}
+}
+

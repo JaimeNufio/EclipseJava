@@ -1,0 +1,11 @@
+
+public class Interface {
+	
+	double[] masterSet = {0,1,2,3,4,5};
+	Double SideA = masterSet[0], Anglea = masterSet[1], SideB = masterSet[2], Angleb = masterSet[3], SideC = masterSet[4], Anglec = masterSet[5];
+	
+	for (int i = 0; i < 3;i++){
+		System.out.println(i);
+	}
+
+}

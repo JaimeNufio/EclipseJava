@@ -1,0 +1,27 @@
+
+public class Main {
+
+	public static void main(String args[]){
+		
+/*
+ * 
+
+
+
+
+
+PP 2.8 Write a program that reads values representing the weight in
+kilograms, grams, and milligrams and then prints the equivalent
+weight in milligrams. (For example, 1 kilogram, 50 grams, and
+42 milligrams is equivalent to 10,50,042 milligrams.)
+
+PP 2.9 Create a version of the previous project that reverses the computation.
+That is, read a value representing the weight in milligrams,
+then print the equivalent weight as a combination of
+kilograms, grams, and milligrams. (For example, 90,70,056
+milligrams is equivalent to 9 kilograms, 70 grams, and
+56 milligrams.)
+ */
+		 
+	}
+}

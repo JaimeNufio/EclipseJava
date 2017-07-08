@@ -1,0 +1,19 @@
+
+public class MyThread extends Thread {
+
+	int num; 
+	
+	public MyThread(int val){
+		num = val;
+	}
+ 
+	public void run(){
+		try {
+			Thread.sleep(100*num);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("Waited :"+(num*100));
+	}
+}

@@ -1,0 +1,50 @@
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+@SuppressWarnings("serial")
+public class TicTacToe extends JFrame {
+
+	public static MyButton[] map = new myButton[9];
+	public static int[][] winConditions = {{1,2},{3,4}};
+	public static boolean[] player = new boolean[9], comp = new boolean[9];
+	
+	
+	private TicTacToe(){
+		
+		super("Hello, World");
+		
+		setSize(600,600);
+		setResizable(false);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLayout(new GridLayout(3,3));
+
+		for (int i = 0; i < map.length; i++){
+			map[i] = new myButton(i+"");
+        }
+        
+        for (int i = 0 ; i < map.length; i++){
+            add(map[i]);
+        }
+	}
+	
+	public static void update(myButton button){
+		if (button.state){
+			button.setText(button.getName()+button.state);
+		}
+	}
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		new TicTacToe().setVisible(true);
+
+		while (true){
+			Thread.sleep(500);
+			for (int i = 0; i < map.length; i++){
+				update(map[i]);
+			}
+		}
+	}
+
+}

@@ -1,0 +1,43 @@
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Main extends JFrame {
+
+	private JPanel contentPane;
+	public static Place[] spot =  new Place[64];
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Main frame = new Main();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Main() {
+		getContentPane().setLayout(new GridLayout(8,8));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(600,600);
+		contentPane = new JPanel();
+		//contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		for (int i = 1; i<(spot.length+1); i++){
+			spot[i-1] = new Place(i-1);
+			contentPane.add(spot[i-1]);
+		}
+	}
+}

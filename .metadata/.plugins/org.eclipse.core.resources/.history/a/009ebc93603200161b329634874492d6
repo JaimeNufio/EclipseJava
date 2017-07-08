@@ -1,0 +1,7 @@
+
+public class Main {
+	public static void Main(){
+		Thread test = new MyThread();
+		test.run();
+	}
+}

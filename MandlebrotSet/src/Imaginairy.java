@@ -1,0 +1,54 @@
+
+public class Imaginairy {
+	double[] set = new double[2];
+	
+	public Imaginairy(double x, double y){
+		super();
+		double[] pos = {x,y};
+		set(pos);
+	}
+
+	public void set(double[] complex){
+		
+		double x = complex[0], y = complex[1]; 
+		
+		this.set[0] = x;
+		this.set[1] = y;
+	}
+	
+	public double[] get(){
+		double[] num = {this.set[0],this.set[1]};
+		return num;
+	}
+	
+	public double getReal(){
+		return this.set[0];
+	}
+	
+	public double getImagine(){
+		return this.set[1];
+	}
+	
+	public double[] add(Imaginairy one, Imaginairy two){
+		double[] num = {one.getReal()+two.getReal(),one.getImagine()+one.getImagine()};
+		return num;
+	}
+	
+	// 4 + 3i * 3 + 2i;
+	// is 12 + 8i + 9i +6i^2 = 12 + 17i -6 = 6 +17i;
+	
+	public double[] squareThis(){
+		
+		double[] newThing = new double[2];
+		
+		newThing[0] = Math.pow(this.getReal(),2) - Math.pow(this.getImagine(), 2);
+		newThing[1] = 2*(this.getImagine()*this.getReal());
+		
+		return newThing;
+	}
+	
+	public void print(int i){
+		System.out.printf("Generation %d: %s + %si %n",i, this.getReal(),this.getReal());
+	}
+	
+}

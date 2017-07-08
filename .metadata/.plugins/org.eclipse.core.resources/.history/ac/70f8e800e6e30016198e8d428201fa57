@@ -1,0 +1,10 @@
+
+public class projectone {
+	rational thing = new rational("Fuck");
+}
+
+class rational{
+	rational(String thing){
+		System.out.println(thing);
+	}
+}

@@ -1,0 +1,27 @@
+
+public class ProjectOne {
+	public static void main(String[] args){
+		Rational thing = new Rational(5,6);
+	}
+}
+
+class Rational{
+	
+	double num,denom;
+	
+	Rational(double num, double denom){
+		setDenom(denom);
+		setNUm(num);
+	}
+	
+	public void setNum(double num){
+		this.num = num;
+	}
+	
+	public void setDenom(double denom){
+		this.denom = denom;
+	}
+	
+	
+	
+}
